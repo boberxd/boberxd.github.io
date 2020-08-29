@@ -26,6 +26,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 
   	justify-content: space-between;
   	padding: 180px 0;
+  	display: flex;
+  	flex-wrap:wrap;
 }
 
 .main-block__info {
@@ -85,15 +87,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 25px;
+	padding: 0 30px 30px 30px;
 }
 .footer-row__link:hover {
 	font-size: 28px;
 }
-
-
-
-
-
 
 
 @font-face {
