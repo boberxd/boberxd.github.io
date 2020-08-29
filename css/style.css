@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 	display: flex;
 
   	justify-content: space-between;
-  	padding: 150px 0;
+  	padding: 180px 0;
 }
 
 .main-block__info {
@@ -61,13 +61,18 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .footer {
 	max-width: 500px;
 	margin: 0 auto;
-	padding-top: 80px;
+	padding-top: 30px;
 }
 
 .footer-row {
 	display: flex;
 	justify-content: space-between;
 }
+
+.footer-row__link a {
+	color: #000;
+}
+
 
 .footer-row__link a:visited {
 	color: #000;
