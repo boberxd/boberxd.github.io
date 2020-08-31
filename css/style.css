@@ -19,15 +19,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .wrapper {
 	max-width: 1213px;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .main-block {
 	display: flex;
-
-  	justify-content: space-between;
-  	padding: 180px 0;
-  	display: flex;
-  	flex-wrap:wrap;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	padding: 175px 0;
 }
 
 .main-block__info {
@@ -46,7 +46,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 .main-block__p {
     font-family: 'kosko_regularregular';
 	font-size: 30px;
-	line-height: 25px;
+	line-height: 30px;
 	text-transform: uppercase;
 	padding-top: 24px;
 }
@@ -72,12 +72,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 }
 
 .footer-row__link a {
-	color: #000;
+	color: #ccc;
 }
 
 
 .footer-row__link a:visited {
-	color: #000;
+	color: #ccc;
 }
 
 .footer-row__link {
@@ -89,8 +89,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 	line-height: 25px;
 	padding: 0 30px 30px 30px;
 }
-.footer-row__link:hover {
-	font-size: 28px;
+.footer-row__link a:hover {
+	color: #000;
 }
 
 
@@ -109,4 +109,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
          url('../fonts/koskobold-bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+.btn {
+	display: none;
 }
