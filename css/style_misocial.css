@@ -211,12 +211,17 @@ a {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	padding: 66px 72px;
+	padding: 66px 30px;
 	max-width: 448px;
 }
 
-.page-item__image {
+.page-item:nth-child(2) {
+	margin: 0 30px;
+}
 
+.page-item__image {
+	height: 110px;
+	weight: 110px;
 }
 
 .page-item__header {
@@ -278,6 +283,7 @@ a {
 	border: 1px solid #d7dbe8;
 	background-color: #ffffff;
 	transition: 0.3s;
+
 }
 
 .page-item__link {
