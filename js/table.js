@@ -1,9 +1,11 @@
 const data = []; // only table data
-let map = new Map(); // from table to objects 
- 
+let sortedData = []; // sorted data by Date 
+let map = new Map(); // from sortedData to Chart objects
+
 const updateMap = () => { 
     map.clear(); 
-    data.forEach((item, index, array) => { 
+    sortedData = [...data].sort((a, b) => new Date(b.date) - new Date(a.date)).reverse(); // Сортировка по датам для корректного рендера графика
+    sortedData.forEach((item, index, array) => { 
         const filtered = array.filter(({tool}) => tool === item.tool); 
         
         const maps = filtered.map(({ date, price }) => ({ 
@@ -51,7 +53,7 @@ let inputDate = document.getElementById('inputDate');
 let inputTool = document.getElementById('inputTool'); 
 let inputPrice = document.getElementById('inputPrice'); 
  
-let newItem = (date, tool, price = '') => { 
+let newItem = (date, tool, price = '') => { // add new item to table
     data.push({ 
         id: data.length+1, 
         date: inputDate.value, 
@@ -92,7 +94,7 @@ let config = {
             xAxes: [{ 
                 type: 'time', 
                 time: { 
-                    unit: 'month' 
+                    unit: 'year' 
                 } 
             }] 
         } 
