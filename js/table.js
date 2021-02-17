@@ -1,13 +1,12 @@
 const data = []; // only table data
-let sortedData = []; // sorted data by Date 
 let map = new Map(); // from sortedData to Chart objects
 
 const updateMap = () => { 
     map.clear(); 
-    sortedData = [...data].sort((a, b) => new Date(b.date) - new Date(a.date)).reverse(); // Сортировка по датам для корректного рендера графика
-    sortedData.forEach((item, index, array) => { 
+    data.sort((a, b) => new Date(a.date) - new Date(b.date)); // Сортировка по датам для корректного рендера графика
+    data.forEach((item, index, array) => { 
         const filtered = array.filter(({tool}) => tool === item.tool); 
-        
+
         const maps = filtered.map(({ date, price }) => ({ 
             x: date, 
             y: price, 
@@ -87,7 +86,7 @@ let newDatas = map.forEach((value, key) => {
 let config = { 
     type: 'line', 
     data: { 
-        datasets: [...objects] 
+        datasets: [...objects], 
     }, 
     options: { 
         scales: { 
