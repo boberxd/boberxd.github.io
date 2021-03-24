@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.textarea__inner {
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+    height: 100vh;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid black;
+    margin: 0 5px 0 5px;
+
+    padding: 5px;
+}
